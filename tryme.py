@@ -9,6 +9,11 @@ from sklearn import preprocessing
 # X_scaled = preprocessing.scale(X_train)
 # print(X_scaled)
 
+def get_run_value():
+    
+
+
+
 def make_data(n):
     np.random.seed(42) # To ensure same data for multiple runs
     x = 2.0 * np.array(range(n))
