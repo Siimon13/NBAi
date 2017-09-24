@@ -10,9 +10,10 @@ Defined by an 8 point differential by one team over a short period of time.
 ### Machine Learning
 	Plays are predicted by a linear model with Tensorflow
 	Weights are used to determine excitement by these types:
- shot, shot clock time (Fast breaks) , hype_factor(Twitter API), and comeback_potential (score differential)
-For example a dunk, pop up, alley oop, etc. are exciting. 
-A long run is boring …
+ 	shot, shot clock time (Fast breaks) , hype_factor(Twitter API), and comeback_potential (score differential)
+		For example a dunk, pop up, alley oop, etc. are exciting. 
+		A long run is boring …
+		
 ### Technology:
 Python and TensorFlow. Twitter api
 
