@@ -43,9 +43,10 @@ def fit_line(n=1, log_progress=False):
         train_step = tf.train.AdamOptimizer(0.05).minimize(error)
 
         # generate input and output data with a little random noise.
-        #x_in, y_star = make_data(n)
-        x_in = get_run_value()
-        y_star = df_nba['Play_Clock_Time']
+        x_in, y_star = make_data(n)
+        #x_in = get_run_value()
+        #y_star = df_nba['Play_Clock_Time']
+        
         init = tf.initialize_all_variables()
         session.run(init)
         feed_dict = {x: x_in, y_act: y_star}
@@ -54,7 +55,7 @@ def fit_line(n=1, log_progress=False):
             err = np.linalg.norm(y_i - y_star, 2)
             if log_progress:
                 print("%3d | %.4f %.4f %.4e" % (i, m_i, b_i, err))
-        run_val = get_run_value()
+       # run_val = get_run_value()
 
         print("Done! m = %f, b = %f, err = %e, iterations = %d"
               % (m_i, b_i, err, i))
